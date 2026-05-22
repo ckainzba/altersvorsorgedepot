@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Musteranschreiben – Altersvorsorge-Reform 2027</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+      font-size: 11pt;
+      line-height: 1.65;
+      color: #1a1a2e;
+      background: #f5f5f5;
+    }
+
+    .page {
+      width: 210mm;
+      min-height: 297mm;
+      margin: 20px auto;
+      background: white;
+      padding: 22mm 25mm 20mm 25mm;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.12);
+    }
+
+    /* Briefkopf */
+    .letterhead {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding-bottom: 8mm;
+      border-bottom: 2px solid #1a1a2e;
+      margin-bottom: 8mm;
+    }
+
+    .letterhead-left .firm-name {
+      font-size: 14pt;
+      font-weight: 700;
+      color: #1a1a2e;
+      letter-spacing: -0.3px;
+    }
+
+    .letterhead-left .firm-details {
+      font-size: 8.5pt;
+      color: #555;
+      margin-top: 3px;
+      line-height: 1.5;
+    }
+
+    .letterhead-right {
+      text-align: right;
+      font-size: 8.5pt;
+      color: #555;
+      line-height: 1.6;
+    }
+
+    .letterhead-right .date-label {
+      font-weight: 600;
+      color: #1a1a2e;
+      font-size: 9pt;
+    }
+
+    /* Empfänger */
+    .recipient {
+      margin-top: 8mm;
+      margin-bottom: 8mm;
+      font-size: 10.5pt;
+      line-height: 1.6;
+    }
+
+    .recipient .label {
+      font-size: 7.5pt;
+      color: #888;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      margin-bottom: 3px;
+    }
+
+    /* Betreff */
+    .subject {
+      margin: 8mm 0 6mm 0;
+      padding: 5mm 6mm;
+      background: #f0f2ff;
+      border-left: 3px solid #3b5bdb;
+      border-radius: 0 6px 6px 0;
+    }
+
+    .subject .subject-label {
+      font-size: 8pt;
+      font-weight: 600;
+      color: #3b5bdb;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 2px;
+    }
+
+    .subject .subject-text {
+      font-size: 12pt;
+      font-weight: 700;
+      color: #1a1a2e;
+      line-height: 1.3;
+    }
+
+    /* Brieftext */
+    .body-text {
+      margin-top: 6mm;
+    }
+
+    .body-text p {
+      margin-bottom: 4.5mm;
+      text-align: justify;
+      hyphens: auto;
+    }
+
+    .body-text .highlight-box {
+      margin: 5mm 0;
+      padding: 4mm 5mm;
+      background: #fafafa;
+      border: 1px solid #e0e0e0;
+      border-radius: 6px;
+      font-size: 10.5pt;
+    }
+
+    .body-text .highlight-box ul {
+      padding-left: 5mm;
+      margin-top: 2mm;
+    }
+
+    .body-text .highlight-box ul li {
+      margin-bottom: 1.5mm;
+    }
+
+    .body-text .highlight-box .box-title {
+      font-weight: 700;
+      margin-bottom: 2mm;
+      color: #1a1a2e;
+    }
+
+    .salutation {
+      margin-bottom: 4mm;
+    }
+
+    .closing {
+      margin-top: 6mm;
+    }
+
+    .closing p {
+      margin-bottom: 2mm;
+    }
+
+    .signature-block {
+      margin-top: 14mm;
+    }
+
+    .signature-line {
+      width: 60mm;
+      border-top: 1px solid #1a1a2e;
+      margin-bottom: 2mm;
+    }
+
+    .signature-name {
+      font-weight: 600;
+      font-size: 10.5pt;
+    }
+
+    .signature-title {
+      font-size: 9pt;
+      color: #555;
+    }
+
+    /* CTA Box */
+    .cta-box {
+      margin-top: 10mm;
+      padding: 5mm 6mm;
+      background: #1a1a2e;
+      color: white;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      gap: 5mm;
+    }
+
+    .cta-box .cta-icon {
+      font-size: 22pt;
+      flex-shrink: 0;
+    }
+
+    .cta-box .cta-text {
+      font-size: 10pt;
+      line-height: 1.5;
+    }
+
+    .cta-box .cta-text strong {
+      font-size: 11pt;
+      display: block;
+      margin-bottom: 1mm;
+    }
+
+    /* Footer */
+    .letter-footer {
+      margin-top: 10mm;
+      padding-top: 4mm;
+      border-top: 1px solid #e0e0e0;
+      font-size: 7.5pt;
+      color: #888;
+      text-align: center;
+      line-height: 1.5;
+    }
+
+    /* Print Styles */
+    @media print {
+      body {
+        background: white;
+      }
+      .page {
+        margin: 0;
+        box-shadow: none;
+        padding: 20mm 25mm 20mm 25mm;
+      }
+      .no-print {
+        display: none;
+      }
+    }
+
+    /* Print Button */
+    .print-bar {
+      text-align: center;
+      padding: 12px;
+      background: #1a1a2e;
+      color: white;
+      font-family: 'Inter', sans-serif;
+      font-size: 10pt;
+    }
+
+    .print-bar button {
+      background: linear-gradient(135deg, #38bdf8, #818cf8);
+      border: none;
+      color: white;
+      padding: 8px 24px;
+      border-radius: 50px;
+      font-weight: 600;
+      cursor: pointer;
+      font-size: 10pt;
+      margin-left: 12px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="print-bar no-print">
+    Musteranschreiben – Altersvorsorge-Reform 2027
+    <button onclick="window.print()">📄 Als PDF speichern</button>
+  </div>
+
+  <div class="page">
+
+    <!-- Briefkopf -->
+    <div class="letterhead">
+      <div class="letterhead-left">
+        <div class="firm-name">[Ihr Name / Kanzleiname]</div>
+        <div class="firm-details">
+          [Straße und Hausnummer] · [PLZ Ort]<br>
+          Tel.: [Telefonnummer] · E-Mail: [E-Mail-Adresse]
+        </div>
+      </div>
+      <div class="letterhead-right">
+        <div class="date-label">Datum</div>
+        [Ort], [Datum]
+      </div>
+    </div>
+
+    <!-- Empfänger -->
+    <div class="recipient">
+      <div class="label">Empfänger</div>
+      [Vorname Nachname]<br>
+      [Straße Hausnummer]<br>
+      [PLZ Ort]
+    </div>
+
+    <!-- Betreff -->
+    <div class="subject">
+      <div class="subject-label">Betreff</div>
+      <div class="subject-text">Reform der privaten Altersvorsorge 2027 –<br>Ihr Riester-Vertrag und neue Möglichkeiten für Sie</div>
+    </div>
+
+    <!-- Anrede -->
+    <div class="body-text">
+      <p class="salutation">Sehr geehrte/r Herr/Frau [Nachname],</p>
+
+      <p>die private Altersvorsorge ist wichtiger denn je: Steigende Lebenshaltungskosten, die demografische Entwicklung und die zunehmende Belastung der gesetzlichen Rentenversicherung machen eine solide, eigenverantwortliche Vorsorge zur unverzichtbaren Grundlage für Ihren Ruhestand.</p>
+
+      <p>Umso erfreulicher ist, dass der Gesetzgeber handelt: Mit dem <strong>Altersvorsorgedepot (AV-Depot)</strong> führt die Bundesregierung ab dem <strong>1. Januar 2027</strong> ein neues, modernisiertes Instrument für die staatlich geförderte private Altersvorsorge ein. Der Bundesrat hat die Reform am 8. Mai 2026 final beschlossen.</p>
+
+      <div class="highlight-box">
+        <div class="box-title">🔑 Das Wichtigste zur neuen Förderung auf einen Blick:</div>
+        <ul>
+          <li><strong>Neue Zulagensystematik:</strong> Bis zu 50 Cent Förderung pro eingezahltem Euro (bei den ersten 30 € Eigenbeitrag/Monat) – deutlich attraktiver als bisher.</li>
+          <li><strong>Maximale Grundzulage:</strong> 540 € jährlich, zuzüglich 300 € Kinderzulage pro Kind.</li>
+          <li><strong>Flexible Anlage:</strong> In ETFs und Fonds ohne Beitragsgarantie-Zwang – mit deutlich höheren Renditechancen.</li>
+          <li><strong>Breiterer Förderkreis:</strong> Auch Selbstständige und Freiberufler sind künftig förderberechtigt.</li>
+          <li><strong>Steuerlich attraktiv:</strong> Eigenbeiträge und Zulagen als Sonderausgaben absetzbar; Erträge in der Ansparphase steuerfrei.</li>
+        </ul>
+      </div>
+
+      <p>Als Inhaber eines bestehenden Riester-Vertrags stehen Sie vor einer konkreten Entscheidung: Sie können Ihren Vertrag unverändert weiterführen, ihn auf die neue Fördersystematik umstellen, beitragsfrei stellen und parallel neu starten – oder das angesparte Kapital förderunschädlich in das neue System übertragen. <strong>Welche Option für Sie die richtige ist, hängt von Ihrer ganz individuellen Situation ab.</strong></p>
+
+      <p>Genau deshalb möchte ich mir mit Ihnen gemeinsam die Zeit nehmen, Ihre aktuelle Vorsorgesituation zu analysieren und den für Sie optimalen Weg zu finden. Dabei geht es nicht nur um die Frage, was mit Ihrem Riester-Vertrag geschieht – sondern um das große Bild: Wie sieht Ihr persönlicher, optimal geförderter Vorsorge-Mix aus, der zu Ihren Wünschen hinsichtlich Rendite, Flexibilität und Steuerstrategie passt?</p>
+
+      <p>Das Jahr 2026 ist das entscheidende Vorbereitungsjahr: Die neuen Produkte stehen ab Anfang 2027 zur Verfügung. <strong>Wer frühzeitig plant, sichert sich die besten Konditionen und lässt keine Förderung liegen.</strong></p>
+
+    </div>
+
+    <!-- CTA -->
+    <div class="cta-box">
+      <div class="cta-icon">📅</div>
+      <div class="cta-text">
+        <strong>Vereinbaren Sie jetzt Ihren persönlichen Beratungstermin.</strong>
+        Ich freue mich darauf, gemeinsam mit Ihnen die beste Strategie für Ihre Altersvorsorge zu erarbeiten. Bitte melden Sie sich telefonisch unter <strong>[Telefonnummer]</strong> oder per E-Mail unter <strong>[E-Mail-Adresse]</strong> – ich stehe Ihnen gerne kurzfristig zur Verfügung.
+      </div>
+    </div>
+
+    <!-- Schluss -->
+    <div class="body-text" style="margin-top: 6mm;">
+      <p>Mit freundlichen Grüßen</p>
+    </div>
+
+    <!-- Unterschrift -->
+    <div class="signature-block">
+      <div class="signature-line"></div>
+      <div class="signature-name">[Vorname Nachname]</div>
+      <div class="signature-title">[Titel / Berufsbezeichnung]</div>
+    </div>
+
+    <!-- Footer -->
+    <div class="letter-footer">
+      [Kanzleiname] · [Anschrift] · [Telefon] · [E-Mail] · [Website] &nbsp;|&nbsp; [Regulatorische Pflichtangaben, z. B. IHK-Registrierung, Erlaubnis gemäß § 34d GewO etc.]
+    </div>
+
+  </div>
+
+</body>
+</html>
